@@ -1,0 +1,336 @@
+ a{
+  font-size: 20px;
+  color: #000000;
+ }
+p,.btn{
+  font-size: 20px !important;
+}
+.container-fluid {
+  /* overflow-x: hidden; */
+}
+.m-4,
+.col-md-7 {
+  font-size: 20px;
+}
+.btn-showmore{
+  font-size: 20px;
+}
+
+.faq-img,
+.container-volunteer .img-margin{
+    margin-top: 0px;
+    margin-left: 16px;
+}
+.faq-img{
+    width: 900px;
+}
+.container-volunteer>h2{
+    margin-left: 1rem;
+}
+.faq,
+/* .volunteer-benefits{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-top: 30px;
+} */
+.fixed-top {
+    background: white;
+}
+.ques{
+    font-weight: 500;
+}
+.ans{
+    color: green;
+    font-weight: 500;
+}
+.faq-con>ol{
+    font-weight: 500;
+}
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
+.nested-accordion-plus > h3:before {
+    content: "+ MORE";   
+    float: right;
+    background-color: #EA7A46;
+    padding: 10px 15px 10px 10px;
+    border: none;
+    color: #fff;
+    border-radius: 30px;
+  }
+  .nested-accordion-plus > h3.selected:before {
+    content: "- LESS";   
+    float: right;
+    background-color: #EA7A46;;
+    padding: 10px 15px 10px 10px;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 30px;
+  }
+
+  .nested-accordion{
+    cursor: pointer;
+  }
+  .mb-30px{
+    margin-bottom:30px;
+  }
+
+
+  .underline-none{
+    text-decoration: none;
+  }
+
+  .card-right-readMore{
+    width: 20%;    
+    left: 55%;   
+  }
+
+  .mb-2rem{
+    margin-bottom: 2.5rem;
+  }
+
+  .videoslide iframe{
+    height: 250px;
+  }
+  
+  .accordion .accordion-container {
+  position: relative;
+  /* margin: 10px 10px; */
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+  position: relative;
+  /* padding: 10px 0;   */
+  color: black;
+  cursor: pointer;  
+}
+
+.accordion .label h3{  
+  font-size: 20px;
+  font-weight:400;
+  width: 100%;
+  color: #000000;
+  margin: 0px;
+}
+
+/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
+.accordion .label::before {
+  content: '+';
+  color: #EB7C46;
+  position: absolute;
+  top: 50%;
+  right: -20px;  
+  transform: translateY(-80%);
+  font-size: 30px;
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+  position: relative;  
+  height: 0;  
+  text-align: justify;  
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .accordion-container.active .content {
+  height: auto;
+}
+.accordion .accordion-container.active .content p {
+  color: #037C3C;
+  font-size: 15px;
+  font-family: Gill_Sans !important;
+  margin: 0px;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .accordion-container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+
+.showmorefaq {
+	display: none;
+}
+.btn-showmore{	
+	background-color: #EB7C46;
+    box-shadow: 0 0 1px 1px #eb7c46;
+    color: white;
+    white-space: nowrap;
+	border-radius: 5rem;
+	border:none;
+	padding:15px;
+}
+
+@media (max-width: 767px){
+.carousel-inner .carousel-item >div{display: none}.carousel-inner .carousel-item >div:first-child{display: block}}.carousel-inner .carousel-item.active, .carousel-inner .carousel-item-next, .carousel-inner .carousel-item-prev{display: flex}
+
+@media (min-width: 768px){
+	.carousel-inner .carousel-item-end.active, .carousel-inner .carousel-item-next{
+		transform: translateX(25%)
+	}
+	
+	.carousel-inner .carousel-item-start.active, .carousel-inner .carousel-item-prev{
+		transform: translateX(-25%)
+	}
+}
+	
+.carousel-inner .carousel-item-end, .carousel-inner .carousel-item-start{
+		transform: translateX(0)
+	}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.top-content .carousel-control-prev { left: -92px; }
+	.top-content .carousel-control-next { right: -92px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.top-content .carousel-control-prev { left: -86px; }
+	.top-content .carousel-control-next { right: -86px; }
+}
+
+@media (max-width: 767px) {
+	.top-content { padding: 20px 0 100px 0; }
+	.top-content h1 { font-size: 22px; }
+	.top-content .description { margin: 10px 0 0 0; }
+	.top-content .carousel-control-prev, 
+	.top-content .carousel-control-next { display: none; }
+	.top-content .carousel-indicators li { margin-left: 10px; margin-right: 10px; }
+}
+
+.volunteer-image{	
+    width: 400px;
+    height: 350px;
+	padding :10px;
+}
+
+.blogs{
+	float:left;
+	width:100%;
+}
+.volunteers h3,.blogs h3{
+
+	margin-bottom: 3%;
+
+}
+.volunteervideos h3{
+	margin-left: 3%;
+}
+.volimages,.blogimages{
+	float:left;
+}
+.videoscontainer{
+	float:left;
+}
+
+
+.volunteervideos .carousel { box-shadow: 0 0 15px 0 #444; }
+.volunteervideos .carousel-control-prev { left: -110px; border-bottom: 0;background-color:#bbbab9; }
+.volunteervideos .carousel-control-next { right: -110px; border-bottom: 0;background-color:#bbbab9; }
+.volunteervideos .carousel-indicators { bottom: -80px; }
+.volunteervideos .carousel-indicators li { width: 16px; height: 16px; margin-left: 5px; margin-right: 5px; border-radius: 50%; }
+
+.volmsg{
+	margin-right: 4%;
+}
+#recipeCarousel 
+{
+  overflow: hidden;
+}
+.accordion{
+	margin-left: 4%;
+}
+.volunteercontainer,.volunteervideos,.blogcontainer{
+	/* margin-left: 1%; */
+    margin-top: 2%;
+}
+.blog-image{
+	float:left;    
+	position:relative;
+	margin-left: 10%;
+    width: 50%;   
+	border: none;
+}
+.blog-info {    
+    width:50%; 
+}
+.blog-src-img {
+    height: 300px;
+    width: 80%;
+}
+.read-more{
+	background-color: #EB7C46;
+    box-shadow: 0 0 1px 1px #eb7c46;
+    color: white;
+    white-space: nowrap;
+	border-radius: 5rem;
+	border:none;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.blog-info-card{
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+	border:none;
+	width: 12%;
+}
+.complete-info{
+	font-size: 1.75rem;
+}
+.blogcontainer{
+	margin-bottom: 35px;
+}
+.blog-info h2,.blog-info p{
+	margin-right:18%
+}
+#recipeCarousel .carousel-control-prev{
+	left:-97px;	
+}
+
+#recipeCarousel .carousel-control-next{
+	right: -97px;
+}
+
+.vol_video_next_btn .carousel-control-next-icon {
+  background-image: url(../Image/next-icon.png);    position: absolute;
+  left: 168px;
+}
+.vol_video_pre_btn .carousel-control-prev-icon
+{
+  background-image: url(../Image/previous-icon.png);   
+   position: absolute;
+  right: 188px;
+}
+.w-aut .carousel-control-next-icon
+{
+  background-image: url(../Image/next-icon.png);    position: absolute;
+}
+.w-aut .carousel-control-prev-icon
+{
+  background-image: url(../Image/previous-icon.png);   
+  position: absolute;
+ right: 188px;
+}

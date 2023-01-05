@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/css/slick.css">
+  <link rel="stylesheet" href="../assets/css/slick-theme.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css"
+    integrity="sha512-NtU/Act0MEcVPyqC153eyoq9L+UHkd0s22FjIaKByyA6KtZPrkm/O5c5xzaia4pyCfReCS634HyQ7tJwKNxC/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../assets/css/about.css">
+  <link rel="stylesheet" href="../assets/css/font.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+  <title>tabmenu</title>
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      /* font-family: 'Gill Sans'; */
+    }
+
+    /* Style the tab */
+    .tab {}
+
+    /* Style the buttons inside the tab */
+    .tab button {
+
+      font-family: Gill_Sans;
+      display: block;
+      background-color: #818080;
+      color: white;
+      padding: 9px 10px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 20px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #FC4400;
+      /* color: #FC4400; */
+    }
+
+    /* Create an active/current "tab button" class */
+    
+    .tab button.active {
+      background: #FC4400 0% 0% no-repeat padding-box;
+      border: 1px solid #FC4400;
+      border-radius: 5px;
+      opacity: 1;
+      font-family: Gill_Sans;
+      font-size: 20px;
+    }
+    /* .sublinkactive{
+      background-color: #FC4400 !important;
+      color: white !important;
+    } */
+
+    .list {
+      margin-bottom: 5px;
+      text-align: left;
+      font-family: Gill_Sans;
+      font-size: 14px;
+      letter-spacing: 0px;
+      color: #818080;
+      opacity: 1;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .unorder .list::before {
+      content: "\2022";
+      color: #FC4400;
+      font-weight: bold;
+      display: inline-block;
+      width: 15px;
+      height: 1em;
+      /* background: #FC4400 0% 0% no-repeat padding-box; */
+      opacity: 1;
+      margin-left: -1em;
+      font-size: 25px;
+      /* padding: 0px 2px; */
+      /* text-align: center; */
+      vertical-align: sub;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .column {
+      float: left;
+      padding: 10px;
+    }
+
+    .left {
+      width: 40%;
+    }
+
+    .right {
+      width: 60%;
+    }
+
+    .left_govn {
+      width: 50%;
+    }
+
+    .right_govn {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      float: left;
+      font-family: Gill_Sans;
+      font-size: 20px;
+      padding: 0px 15px 0 50px;
+      /* border: 1px solid #ccc; */
+      width: 80%;
+      border-left: none;
+      /* height: 300px; */
+    }
+
+    .careers {
+      text-align: left;
+      text-decoration: underline;
+      font-family: Gill_Sans;
+      font-size: 20px;
+      letter-spacing: 0px;
+      color: #737373;
+      opacity: 1;
+    }
+
+    .governance_heading {
+      text-align: left;
+      font-size: 20px;
+      font-family: Gill_Sans;
+      letter-spacing: 0px;
+      color: #FC4400;
+      opacity: 1;
+    }
+
+    .contactus_heading {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-family: Gill_Sans;
+      letter-spacing: 0px;
+      color: #FC4400;
+      opacity: 1;
+    }
+
+    .HO_address {
+      font-size: 14px !important;
+      font-family: Gill_Sans;
+      letter-spacing: 0px;
+      color: #737373;
+      opacity: 1;
+      margin-bottom: 5px;
+    }
+
+    .spanurl {
+      font-family: Gill_Sans;
+      font-size: 14px;
+      letter-spacing: 0px;
+      color: #818080;
+      opacity: 1;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .p_top {
+      padding-top: 7rem !important;
+    }
+
+    /* .download-position {
+      position: relative;
+      top: -45px;
+      right: -141px;
+    } */
+    .carousel>.carousel-control-prev,
+    .carousel>.carousel-control-next {
+      width: 20%;
+      opacity: 2.5;
+    }
+
+    .PG-img-height {
+      width: 800px;
+      height: 360px;
+    }
+
+    small,
+    .small {
+      font-size: 0.5em;
+    }
+
+    .fa-solid,
+    .fas {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div data-load="header.html" id="headerID"></div>
+  
+  <div class="container p_top">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="tab">
+          <button class="tablinks Principles-btn" onclick="openCity(event, 'Principles')" id="defaultOpen">Principles</button>
+          <button class="tablinks Code_of_Conduct-btn" onclick="openCity(event, 'Code_of_Conduct')">Code of Conduct</button>
+          <button class="tablinks Who_We_Are-btn" onclick="openCity(event, 'Who_We_Are')">Who We Are</button>
+          <button class="tablinks Careers-btn" onclick="openCity(event, 'Careers')">Careers</button>
+          <button class="tablinks Governance-btn" onclick="openCity(event, 'Governance')">Governance</button>
+          <button class="tablinks Partners-btn" onclick="openCity(event, 'Partners')">Partners</button>
+          <button class="tablinks FAQs-btn" onclick="openCity(event, 'FAQs')">FAQs</button>
+          <button class="tablinks Contact_Us-btn" onclick="openCity(event, 'Contact_Us')" >Contact Us</button>
+          <button class="tablinks Photo_Gallery-btn" onclick="openCity(event, 'Photo_Gallery')">Photo Gallery</button>
+          <button class="tablinks Media_Kit-btn" onclick="openCity(event, 'Media_Kit')">Media Kit</button>
+          <button class="tablinks Internship-btn" onclick="openCity(event, 'Internship')">Internship</button>
+
+        </div>
+      </div>
+      <div class="col-lg-10 mb-5 pb-4">
+        <div id="Principles" class="tabcontent">
+          <label class="governance_heading">Principles</label>
+        </div>
+
+        <div id="Code_of_Conduct" class="tabcontent">
+          <label class="governance_heading">Code of Conduct</label>
+        </div>
+
+        <div id="Who_We_Are" class="tabcontent">
+          <label class="governance_heading">Who We Are</label>
+        </div>
+        <div id="Careers" class="tabcontent ">
+
+          <!-- <i class="fa-thin fa-envelope" style="font-size:24px"></i> -->
+
+          <label><span style="font-family: Gill_Sans;
+             font-size: 20px;
+             letter-spacing: 0px;
+             color: #737373;
+             opacity: 1;">Write to:</span>&nbsp;&nbsp; <img
+              src="https://www.evidyaloka.org/static/images/mail_contact.png">&nbsp;<a class="careers"
+              href="mailto:career@evidyaloka.org">career@evidyaloka.org</a></label>
+          <!-- <a href='https://pngtree.com/so/Vector'>Vector png from pngtree.com/</a> -->
+        </div>
+        <div id="Partners" class="tabcontent">
+          <label class="governance_heading">Partners</label>
+        </div>
+        <div id="Governance" class="tabcontent">
+          <div class="row">
+            <div class="column left_govn">
+              <div>
+                <div>
+                  <label class="governance_heading">Organization</label>
+                  <ul class="unorder" style="margin-top: 10px;margin-bottom: 10px;">
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Trust_Deed.pdf">Legal
+                        Status - Trust Deed Trust Deed Amendment</a>
+                    </li>
+                    <li>
+                      <a class="list" href="#">Governing Bodies</a>
+                    </li>
+                    <li>
+                      <a class="list" href="#">Key Board Resolutions</a>
+                    </li>
+                    <ul>
+                      <li>
+                        <a class="list"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/Trustee_change1.pdf">Trustee
+                          Change -1</a>
+                      </li>
+                      <li>
+                        <a class="list"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/Address_change.pdf">Address
+                          Change</a>
+                      </li>
+                      <li>
+                        <a class="list"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/PG_decision.pdf">PG decision</a>
+                      </li>
+                      <li>
+                        <a class="list"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/Trustee_change2.pdf">Trustee
+                          Change -2</a>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                <div>
+                  <label class="governance_heading">Income Tax details</label>
+                  <ul style="margin-top: 10px; margin-bottom: 10px;">
+                    <ul class="unorder">
+                      <li>
+                        <a class="list"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_trust_80G.pdf">80G</a>
+                      </li>
+                      <li>
+                        <a class="list"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Trust_12A.pdf">12A</a>
+                      </li>
+                      <li>
+                        <a class="list" href="https://www.evidyaloka.org/static/uploads/careers_files/PAN_Card.jpeg">PAN
+                          Card</a>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                <!-- ------------external------------ -->
+                <div>
+                  <label class="governance_heading">External</label>
+
+                  <ul class="unorder" style="margin-top: 10px; margin-bottom: 10px;">
+                    <li>
+                      <a class="list" href="#">Finance & Accounting Policy</a>
+                    </li>
+                    <li>
+                      <a class="list" href="https://www.evidyaloka.org/conduct/">Volunteer Code of Conduct</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/TN_Govt_Report.pdf">Tamil Nadu
+                        Government Report</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/Final_draft_DATA_PROTECTION_POLICY_eV.pdf">Data
+                        Protection Policy (GDPR compliance)</a>
+                    </li>
+
+                  </ul>
+                </div>
+                <!-- ------end of external------------ -->
+                <!-- ------------FCRA------------ -->
+                <div>
+                  <label class="governance_heading">FCRA</label>
+
+                  <ul class="unorder" style="margin-top: 10px; margin-bottom: 10px;">
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_Q1_April_June_2022.pdf">Q1
+                        (April- June) 2022</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_Q4_January-March_2022.pdf">Q4
+                        (January - March) 2022</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_Q3_October_December_%202021.pdf">Q3
+                        (October - December) 2021</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Q2_July%20_Sept_2021.pdf">Q2
+                        (July- Sept) 2021</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Q1-April-June2021.pdf">Q1 (April-
+                        June) 2021</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_Annual_Returns_2020_21.pdf">FCRA
+                        Annual Returns FY 2020-21</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Q4-January-March2021.pdf">Q4
+                        (January-March) 2021</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Q3_FCRAIntimation.pdf">Q3
+                        (October-December) 2020</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA%202020-21_Q2.pdf">Q2
+                        (July-September) 2020</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_2020-21_Q1.pdf">Q1
+                        (April-June) 2020</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Annual_Returns_2019_20.pdf">FCRA
+                        Annual Returns FY 2019-20</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_Quarter_IntimationQ4_2019-20.pdf">Q4
+                        (January- March) 2020</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q3-19-20.pdf">Q3
+                        (October- December) 2019</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q2-19-20.pdf">Q2
+                        (July- September) 2019</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q1-19-20.pdf">Q1
+                        (April- June) 2019</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/FCRA_Annual_Returns_FY_2018-19.pdf">FCRA
+                        Annual Returns FY 2018-19</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q4-18-19.pdf">Q4
+                        (January- March) 2019</a>
+                    </li>
+
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q3-18-19.pdf">Q3
+                        (October- December) 2018</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q2-18-19.pdf">Q2
+                        (July- September) 2018</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm_PDF-Q1-18-19.pdf">Q1
+                        (April- June) 2018</a>
+                    </li>
+                    <li>
+                      <a class="list"
+                        href="https://www.evidyaloka.org/static/uploads/careers_files/Fc_qtrFrm-17-18-Q4_PDF.pdf">Q4
+                        (January- March) 2018</a>
+                    </li>
+
+                  </ul>
+                </div>
+                <!-- ------end of FCRA------------ -->
+              </div>
+            </div>
+            <div class="column right_govn">
+              <div>
+                <label class="governance_heading">Audited Financial Reports</label>
+                <ul class="unorder" style="margin-top: 10px;margin-bottom: 10px;">
+
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audit_Report_20-21.PDF">2020-21</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audit%20Report%2019-20.PDF">2019-20</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audit%20Report%20FY%202018-19%20Merged.pdf">2018-19</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audit_Report_FY2017-18.pdf">2017-18</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audit_Report_2016-17.pdf">2016-17</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audited_Accounts_FY2015-16.pdf">2015-16</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audited_Accounts_FY2014-15.pdf">2014-15</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audited_Accounts_FY2013-14.pdf">2013-14
+                      <span><a class="spanurl"
+                          href="https://www.evidyaloka.org/static/uploads/careers_files/form_10b.pdf">Form 10b</a>
+                      </span></a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audited_Accounts_FY2012-13.pdf">2012-13</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Audited_Accounts_FY2011-12.pdf">2011-12</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <label class="governance_heading">Annual Report</label>
+                <ul class="unorder" style="margin-top: 10px; margin-bottom: 10px; ">
+
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Annual_Report_2020-21.pdf">2020-21</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka%20Annual%20Report%202019-20.pdf">2019-20</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Annual_Report_2018-19.pdf">2018-19</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Annual%20Report%202017-18.pdf">2017-18</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Annual_Report_2016-17.pdf">2016-17</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Annual_Report-2015-16.pdf">2015-16</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Annual_Report-2014-15.pdf">2014-15</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Annual_Report-2013-14.pdf">2013-14</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/Annual_Report_AY_12-13.pdf">2012-13</a>
+                  </li>
+                  <li>
+                    <a class="list"
+                      href="https://www.evidyaloka.org/static/uploads/careers_files/eVidyaloka_Annual_Report_2011-12.pdf">2011-12</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="mapouter">
+          <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
+             marginheight="0" marginwidth="0" 
+             src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe><a href="https://mcpenation.com/">https://mcpenation.com</a></div>
+            <style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}
+              .gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}
+            </style></div> -->
+          </div>
+        </div>
+        <div id="FAQs" class="tabcontent">
+          <label class="contactus_heading">FAQs</label>
+        </div>
+        <div id="Contact_Us" class="tabcontent">
+          <div class="row">
+            <div class="column left" style="border-right: 1px dashed #707070;
+           opacity: 1;padding-left: 20px;">
+              <div>
+                <div style="margin-bottom:2em;">
+                  <label class="contactus_heading">Head Office:</label>
+                  <div>
+                    <p class="HO_address">eVidyaloka Trust</p>
+                    <p class="HO_address">2020, South End ‘E’ Main Road,</p>
+                    <p class="HO_address">9th Block, Jayanagar,</p>
+                    <p class="HO_address">Bengaluru - 560011</p>
+                    <p class="HO_address" style="padding-left:10px;"><img style="height: 15px;"
+                        src="https://www.evidyaloka.org/static/images/call_contact.png">&nbsp;080-40903939</p>
+                    <p class="HO_address">(9:00 AM to 6:00 PM)</p>
+                    <p class="HO_address"><img style="height: 20px;"
+                        src="https://www.evidyaloka.org/static/images/wats.png">&nbsp;+91 6361517776</p>
+                  </div>
+                </div>
+                <div>
+                  <label class="contactus_heading">Got Something?</label>
+                  <p class="HO_address"><img style="height: 20px;"
+                      src="https://www.evidyaloka.org/static/images/mail_contact.png">&nbsp;<a class="HO_address"
+                      href="mailto:career@evidyaloka.org">talktosomeone@evidyaloka.org</a></p>
+                  <p class="HO_address"><img style="height: 15px;"
+                      src="https://www.evidyaloka.org/static/images/call_contact.png">&nbsp;080-40903939</p>
+                  <p class="HO_address"><img style="height: 20px;"
+                      src="https://www.evidyaloka.org/static/images/wats.png">&nbsp;+91 6361517776</p>
+                  <p class="HO_address"><img style="height: 20px;"
+                      src="https://www.evidyaloka.org/static/images/skype.png">&nbsp;evidyaloka.helpdesk</p>
+                </div>
+              </div>
+            </div>
+            <!-- <hr style="border-left: 6px solid green;
+             height: 500px;
+              position: absolute;
+               left: 50%;
+               margin-left: -3px;
+                top: 0;"> -->
+            <div class="column right" style="padding-left: 2em;">
+              <div style="margin-bottom:2em;">
+                <label class="contactus_heading">Registered Office:</label>
+                <p class="HO_address">eVidyaloka Trust, 10 B, </p>
+                <p class="HO_address">1st A Main, MCHS Colony,</p>
+                <p class="HO_address">5th Block, Sector 6, HSR Layout,</p>
+                <p class="HO_address">Bengaluru-560102</p>
+              </div>
+              <div>
+                <div class="mapouter">
+                  <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                      marginheight="0" marginwidth="0"
+                      src="https://maps.google.com/maps?width=360&amp;height=200&amp;hl=en&amp;q=evidyaloka trust&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                      href="https://mcpenation.com/">Minecraft Website</a></div>
+                  <style>
+                    .mapouter {
+                      position: relative;
+                      text-align: right;
+                      width: 100%;
+                      height: 200px;
+                    }
+
+                    .gmap_canvas {
+                      overflow: hidden;
+                      background: none !important;
+                      width: 100%;
+                      height: 200px;
+                    }
+
+                    .gmap_iframe {
+                      height: 200px !important;
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Photo_Gallery" class="tabcontent">
+          <label class="contactus_heading">Photo Gallery</label>
+          <div id="carouselDigitalSchool" class="carousel slide col-lg-12" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="6"
+                aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="7"
+                aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="8"
+                aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="9"
+                aria-label="Slide 10"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="10"
+                aria-label="Slide 11"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="11"
+                aria-label="Slide 12"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="12"
+                aria-label="Slide 13"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="13"
+                aria-label="Slide 14"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="14"
+                aria-label="Slide 15"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="15"
+                aria-label="Slide 16"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="16"
+                aria-label="Slide 17"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="17"
+                aria-label="Slide 18"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="18"
+                aria-label="Slide 19"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="19"
+                aria-label="Slide 10"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="20"
+                aria-label="Slide 21"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="21"
+                aria-label="Slide 22"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="22"
+                aria-label="Slide 23"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="23"
+                aria-label="Slide 24"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="24"
+                aria-label="Slide 25"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="25"
+                aria-label="Slide 26"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="26"
+                aria-label="Slide 27"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="27"
+                aria-label="Slide 28"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="28"
+                aria-label="Slide 29"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="29"
+                aria-label="Slide 30"></button>
+              <button type="button" data-bs-target="#carouselDigitalSchool" data-bs-slide-to="30"
+                aria-label="Slide 31"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <!-- <div class="col-lg-4 d-flex flex-column align-items-center p-3"> -->
+                    <!-- <div class="test-img"> -->
+                    <img src="../assets/Image/PG1.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                    <!-- </div> -->
+                    <!-- <div class="text-center">
+                                                <p class="testimonial-name mt-1 mb-0">Madhukar B.K</p>
+                                                <p class="testimonial-name mb-0">Individual Donor, Bangalore</p>
+                                            </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-8 para-testi px-3 pb-5 ">
+                                            <p class="testi-desc">
+                                                Education for kids has always been something which I strongly
+                                                believe in. Teach them
+                                                young
+                                                and
+                                                watch them grow into fine young adults !! I have been doing a small
+                                                bit for multiple
+                                                years
+                                                now
+                                                and hope to be able to continue doing it in the coming times.
+                                            </p>
+                                        </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <!-- <div class="col-lg-4 d-flex flex-column align-items-center p-3"> -->
+                    <!-- <div class="test-img"> -->
+                    <img src="../assets/Image/PG2.JPG" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                    <!-- </div> -->
+                    <!-- <div class="text-center">
+                                                <p class="testimonial-name mt-1 mb-0">Sampa Chatterjee</p>
+                                                <p class="testimonial-name mb-0">Individual Donor, Kolkata</p>
+                                            </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-8 para-testi px-3 pb-5 ">
+                                            <p class="testi-desc">
+                                                To educate students deprived of education is not an easy task. My
+                                                best wishes to the team and their efforts.
+                                            </p>
+                                        </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <!-- <div class="col-lg-4 d-flex flex-column align-items-center p-3"> -->
+                    <!-- <div class="test-img"> -->
+                    <img src="../assets/Image/PG3.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                    <!-- </div> -->
+                    <!-- <div class="text-center">
+                                                <p class="testimonial-name mt-1 mb-0">Haresh Velusamy</p>
+                                                <p class="testimonial-name mb-0">Individual Donor, Bangalore</p>
+                                            </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-8 para-testi px-3 pb-5 ">
+                                            <p class="testi-desc">
+                                                Happy to be a small part of the change makers of today's India.
+                                                Great impact being done by eVidyaloka!
+                                            </p>
+                                        </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <!-- <div class="col-lg-4 d-flex flex-column align-items-center p-3"> -->
+                    <!-- <div class="test-img"> -->
+                    <img src="../assets/Image/PG4.jpeg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                    <!-- </div> -->
+                    <!-- <div class="text-center">
+                                                <p class="testimonial-name mt-1 mb-0"></p>
+                                                <p class="testimonial-name mb-0">Donor</p>
+                                            </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-8 para-testi px-3 pb-5 ">
+                                            <p class="testi-desc">
+                                                I'm very proud to that I'm able to do something for uplifting rural
+                                                children. I would
+                                                like to continue my support towards this great cause & my dream too
+                                                to transform rural & remote places into an education & skill
+                                                development hub. eVidyaloka is one such platform which goes beyond
+                                                that. Every child must get their basic education with confidence.
+                                                🙏🏻
+        
+                                            </p>
+                                        </div> -->
+                  </div>
+
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG5.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG6.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG7.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG8.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG9.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG10.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG11.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG12.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG13.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG14.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG15.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG16.JPG" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG17.JPG" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG18.JPG" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG19.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG20.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG21.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG22.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG23.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG24.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG25.jpg" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG26.png" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG27.png" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG28.png" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG29.png" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG30.png" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="d-flex align-items-center d-flex-responsive ">
+                    <img src="../assets/Image/PG31.png" alt="test-img" width="800px" height="400px" loading="lazy"
+                      class="img-fluid PG-img-height mx-auto d-block">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDigitalSchool"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDigitalSchool"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="Media_Kit" class="tabcontent" style="width: 100% !important; ">
+          <label class="contactus_heading">Media Kit</label>
+          <div class="row">
+            <div class="col-lg-12 d-flex flex-row align-items-end">
+              <div class="col-lg-3 me-3">
+                <a href="../assets/Image/logos/eVidyaloka_h_1c_black-01.png" download="eVidyaloka_h_1c_black">
+                  <img src="../assets/Image/logos/eVidyaloka_h_1c_black-01.png" class="shadow mb-3 bg-body rounded"
+                    alt="" width="100%">
+                  <div class="col-lg-2 d-flex flex-column align-items-center float-end">
+                    <i class="fa-solid fa-download"></i>
+                    <small>download</small>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 me-3">
+                <a href="../assets/Image/logos/eVidyaloka_v_1c_black-01.png" download="eVidyaloka_v_1c_black">
+                  <img src="../assets/Image/logos/eVidyaloka_v_1c_black-01.png" class="shadow mb-3 bg-body rounded"
+                    alt="" width="100%">
+                  <div class="col-lg-2 d-flex flex-column align-items-center float-end">
+                    <i class="fa-solid fa-download"></i>
+                    <small>download</small>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 me-3">
+                <a href="../assets/Image/logos/logos_tm_h.png" download="logos_tm_h">
+                  <img src="../assets/Image/logos/logos_tm_h.png" class="shadow mb-3 bg-body rounded" alt=""
+                    width="100%">
+                  <div class="col-lg-2 d-flex flex-column align-items-center float-end">
+                    <i class="fa-solid fa-download"></i>
+                    <small>download</small>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="../assets/Image/logos/logos_tm_v.png" download="logos_tm_v">
+                  <img src="../assets/Image/logos/logos_tm_v.png" class="shadow mb-3 bg-body rounded" alt=""
+                    width="100%">
+                  <div class="col-lg-2 d-flex flex-column align-items-center float-end">
+                    <i class="fa-solid fa-download"></i>
+                    <small>download</small>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div id="Internship" class="tabcontent" style="width: 100% !important; ">
+          <label class="contactus_heading">Internship</label>
+          <div class="card mb-3 border border-0 shadow p-3 mb-5 bg-body rounded">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <h5 class="card-title">Get Internship and Job Preparation Training FREE! <span
+                      class="badge text-bg-danger float-end">OFFER</span> </h5>
+                  <p class="card-text">Get 55% + 10% OFF on all online trainings</p>
+                  <p class="card-text"><i class="fa-regular fa-clock me-2"></i>Offer ends in <span
+                      class="fw-bold">08h:17m:46s</span> </p>
+                  <p class="card-text">Choose from Web Dev., Phython, Data Science, Marketing & more</p>
+                  <span class="btn btn-light rounded-pill fw-bold text-muted">Internshala Certified Trainings </span>
+                  <span><a href="#" class="float-end text-decoration-none">Enroll now <i class="fa-solid fa-angle-right"
+                        style="color: blue;"></i> </a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 border border-0 shadow p-3 mb-5 bg-body rounded">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <h5 class="card-title">Business Development (Sales)</h5>
+                  <p class="card-subtitle text-muted"> AUMHUM</p>
+                  <p class="card-text mt-3"><i class="fa-solid fa-house me-2 text-muted"></i>Work From Home</p>
+                  <div class="row my-3">
+                    <div class="col-lg-2">
+                      <div class="">
+                        <p class="card-text mb-0 fs-6 text-muted"><i class="fa-regular fa-circle-play"></i> START DATE
+                        </p>
+                        <span class="card-text">Immediately</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="">
+                        <p class="card-text mb-0 fs-6 text-muted"><i class="fa-regular fa-calendar"></i> DURATION</p>
+                        <span class="card-text">2 Months</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-5">
+                      <div class="">
+                        <p class="card-text mb-0 fs-6 text-muted"><i class="fa-solid fa-money-bill text-muted"></i>
+                          STIPEND</p>
+                        <span class="card-text">&#8377 1,000 /month + Incentives <i
+                            class="fa-regular fa-circle-question"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="">
+                        <p class="card-text mb-0 fs-6 text-muted"><i class="fa-solid fa-hourglass-end text-muted"></i>
+                          APPLY BY</p>
+                        <span class="card-text">17 Aug' 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="btn btn-light rounded-pill fw-bold text-muted me-3">Internship</span><span
+                    class="btn btn-light rounded-pill fw-bold text-muted">Part time allowed</span> <span><a href="#"
+                      class="float-end text-decoration-none">View details <i class="fa-solid fa-angle-right"
+                        style="color: blue;"></i> </a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- <div data-load="footer.html" id="footerID"></div> -->
+  <div class="">
+    <div data-load="footer.html" id="footerID"></div>
+  </div>
+
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+  <!--  -->
+
+
+  <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>  -->
+  <!-- <script src="../assets/js/jquery-3.5.1.min.js"></script> -->
+  <!-- <script src="../assets/js/slick.js"></script> -->
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+
+  <script>
+    function check(img) {
+      document.getElementById("imagepreview").src = img.src;
+    }
+//     $("li[data-target='#myModal']").on('click',function(){
+//   $(".modal-body").html($(this).attr('data-content'));
+// });
+  </script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="../assets/js/layout.js"></script>
+</body>
+
+</html>

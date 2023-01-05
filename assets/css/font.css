@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: gbold_italic;
+    src: url("../fonts/Gill_Sans_Bold_Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Bold;
+    src: url("../fonts/Gill_Sans_Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Italic;
+    src: url("../fonts/Gill_Sans_Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Light_Italic;
+    src: url("../fonts/Gill_Sans_Light_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Gill_Sans_Heavy_Italic;
+    src: url("../fonts/Gill_Sans_Heavy_Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Heavy;
+    src: url("../fonts/Gill_Sans_Heavy.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Light;
+    src: url("../fonts/Gill_Sans_Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Medium_Italic;
+    src: url("../fonts/Gill_Sans_Medium_Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans_Medium;
+    src: url("../fonts/Gill_Sans_Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: Gill_Sans;
+    src: url("../fonts/Gill_Sans.otf") format("opentype");
+}
+@font-face {
+    font-family: GillSans_Condensed_Bold;
+    src: url("../fonts/GillSans_Condensed_Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: GillSans_Condensed;
+    src: url("../fonts/GillSans_Condensed.otf") format("opentype");
+}
+ 
+body 
+{
+    /* font-family: gbold_italic; */
+}
+p 
+{
+    font-family: Gill_Sans;
+}
